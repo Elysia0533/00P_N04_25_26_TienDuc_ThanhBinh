@@ -8,37 +8,42 @@ import java.sql.Statement;
 import java.util.Random;
 import java.lang.System;
 
-
 import com.example.servingwebcontent.User;
 
 public class insertToAiven {
     public void insertToAivenDb(User u) {
         Connection conn = null;
-        /* 
-        String user = System.getenv("user");
-        String password = System.getenv("password");
-        String host = System.getenv("host");
-        String port = System.getenv("port");
-        String databaseName = System.getenv("databaseName");*/
+        /*
+         * String user = System.getenv("user");
+         * String password = System.getenv("password");
+         * String host = System.getenv("host");
+         * String port = System.getenv("port");
+         * String databaseName = System.getenv("databaseName");
+         */
 
         System.out.println(
-            String.format("The current shell is: %s.", System.getenv("port"))
-        );
-        
-       // System.out.println("port"+port);
+                String.format("The current shell is: %s.", System.getenv("port")));
 
-    
+        // System.out.println("port"+port);
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            
+
             conn = DriverManager.getConnection(
                     "jdbc:mysql://avnadmin:AVNS_2ZlIVz4ACEb86Eu0Exr@mysql-14737a33-nglthu-4e05.k.aivencloud.com:17237/defaultdb?ssl-mode=REQUIRED",
-                    "sqluser", "password"); 
+                    "sqluser", "password");
 
-           /*  conn = DriverManager.getConnection("jdbc:mysql://"+user+":"+password+"@"+host+":"+port+"/"+databaseName+"?ssl-mode=REQUIRED", user, password);*/
+            /*
+             * conn =
+             * DriverManager.getConnection("jdbc:mysql://"+user+":"+password+"@"+host+":"+
+             * port+"/"+databaseName+"?ssl-mode=REQUIRED", user, password);
+             */
             Statement sta = conn.createStatement();
+
+            // random userID
             Random rand = new Random();
             int id = rand.nextInt(1000);
+            //
             String userIdVal = "u" + id;
             String ur = u.getUserName();
             String ad = u.getAddress();
@@ -51,7 +56,6 @@ public class insertToAiven {
                 pst.executeUpdate();
             }
             System.out.println("Display data from database: ");
-            
 
             sta.close();
             conn.close();
