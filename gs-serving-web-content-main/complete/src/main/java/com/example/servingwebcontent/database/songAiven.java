@@ -13,7 +13,7 @@ import com.example.servingwebcontent.User;
 import com.example.servingwebcontent.Song;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 
-
+@Controller
 public class songAiven {
 
     public songAiven(){}
@@ -24,6 +24,11 @@ public class songAiven {
      */
 
     ArrayList<Song> items = new ArrayList<Song>(); 
+    @Value("${app.database.url}")
+    private String urlString;
+
+    @Value("${app.database.driver}")
+    private String appDriver;
   
 
     /**
@@ -34,10 +39,9 @@ public class songAiven {
         Connection conn = null;
         try {
            
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName(appDriver);
             conn = DriverManager.getConnection(
-                    "jdbc:mysql://avnadmin:AVNS_RE3O2bhYZ_1_6ER7YK7@mysql-14737a33-nglthu-4e05.k.aivencloud.com:17237/defaultdb?ssl-mode=REQUIRED",
-                    "sqluser", "password");
+                    urlString);
             Statement sta = conn.createStatement();
 
             ResultSet setdata = sta.executeQuery("select * from song limit 10");
