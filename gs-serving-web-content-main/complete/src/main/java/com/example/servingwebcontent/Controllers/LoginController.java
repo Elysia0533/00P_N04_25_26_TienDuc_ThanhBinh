@@ -1,4 +1,4 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.lang.RuntimeException;
 import java.util.ArrayList;
 import com.example.servingwebcontent.database.insertToAiven;
+import com.example.servingwebcontent.Components.WriteToFile;
+import com.example.servingwebcontent.Model.User;
 import com.example.servingwebcontent.database.aivenConnection;
 
 

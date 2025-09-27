@@ -1,5 +1,7 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.Controllers;
 import java.util.ArrayList;
+
+import com.example.servingwebcontent.Model.User;
 
 public class ListUser {
     public void printListUser(ArrayList<User> listUser){

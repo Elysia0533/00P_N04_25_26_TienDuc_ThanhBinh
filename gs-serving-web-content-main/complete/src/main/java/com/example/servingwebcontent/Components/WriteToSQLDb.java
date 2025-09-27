@@ -1,4 +1,5 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.Components;
+import com.example.servingwebcontent.Model.User;
 import com.example.servingwebcontent.database.insertToAiven;
 
 

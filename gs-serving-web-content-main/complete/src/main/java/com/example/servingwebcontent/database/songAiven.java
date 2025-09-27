@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 
-import com.example.servingwebcontent.ListUser;
-import com.example.servingwebcontent.User;
-import com.example.servingwebcontent.Song;
+import com.example.servingwebcontent.Controllers.ListUser;
+import com.example.servingwebcontent.Model.Song;
+import com.example.servingwebcontent.Model.User;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 
 @Controller

@@ -1,4 +1,5 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.Controllers;
+import com.example.servingwebcontent.Model.User;
 import com.example.servingwebcontent.database.userAiven;
 
 import org.springframework.stereotype.Controller;

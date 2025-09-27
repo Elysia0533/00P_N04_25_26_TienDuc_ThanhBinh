@@ -1,4 +1,4 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.Model;
 
 public class Song {
     public String songID;

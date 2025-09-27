@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 //import java.util.List;
 
-import com.example.servingwebcontent.ListUser;
-import com.example.servingwebcontent.User;
+import com.example.servingwebcontent.Controllers.ListUser;
+import com.example.servingwebcontent.Model.User;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 
 

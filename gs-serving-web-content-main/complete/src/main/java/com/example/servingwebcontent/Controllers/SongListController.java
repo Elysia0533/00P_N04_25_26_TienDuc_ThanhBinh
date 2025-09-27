@@ -1,9 +1,10 @@
-package com.example.servingwebcontent;
+package com.example.servingwebcontent.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.example.servingwebcontent.Model.Song;
 import com.example.servingwebcontent.database.songAiven;
 
 import java.util.ArrayList;
