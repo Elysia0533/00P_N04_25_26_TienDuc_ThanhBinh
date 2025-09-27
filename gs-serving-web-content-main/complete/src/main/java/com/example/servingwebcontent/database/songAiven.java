@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 //import java.util.List;
 
+import org.springframework.stereotype.Controller;
+
 import com.example.servingwebcontent.ListUser;
 import com.example.servingwebcontent.User;
 import com.example.servingwebcontent.Song;
@@ -24,13 +26,13 @@ public class songAiven {
      */
 
     ArrayList<Song> items = new ArrayList<Song>(); 
-    @Value("${app.database.url}")
-    private String urlString;
+    // @Value("${app.database.url}")
+    // private String urlString;
 
-    @Value("${app.database.driver}")
-    private String appDriver;
-  
-
+    // @Value("${app.database.driver}")
+    // private String appDriver;
+  private String urlString = "jdbc:mysql://avnadmin:AVNS_jhA9Lhe0hpI74N82V0q@mysql-14737a33-nglthu-4e05.k.aivencloud.com:17237/defaultdb?ssl-mode=REQUIRED";
+  private String appDriver = "com.mysql.cj.jdbc.Driver";
     /**
      * @return
      */
